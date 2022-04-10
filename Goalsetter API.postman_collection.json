@@ -1,0 +1,737 @@
+{
+	"info": {
+		"_postman_id": "3b310181-26ce-456b-8369-f6a75a88d2b9",
+		"name": "Goalsetter API",
+		"description": "REST API for goal setter app. Resources include Users and Goals.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "new user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Registers a new user with a name, email, and password."
+					},
+					"response": [
+						{
+							"name": "Register new user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "new user",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "test1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"104-g/r3FZAsC2gmhQJRJ4U7JLIs9DE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:27:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62533d98382c5fb1a62af1ac\",\n    \"name\": \"new user\",\n    \"email\": \"test1@gmail.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzZDk4MzgyYzVmYjFhNjJhZjFhYyIsImlhdCI6MTY0OTYyMjQyNCwiZXhwIjoxNjUyMjE0NDI0fQ.7yeTej0zWd4_hn1BdSUKXehtmbb9A43RJQNsJ2dk83U\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Authenticate a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						},
+						"description": "Authenticate a user upon login"
+					},
+					"response": [
+						{
+							"name": "Authenticate a user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "test@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "test123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"103-a9wrUc0vrzeTrMyZbUth3dFrc5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:26:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62533b4e382c5fb1a62af1a6\",\n    \"name\": \"new user\",\n    \"email\": \"test@gmail.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzYjRlMzgyYzVmYjFhNjJhZjFhNiIsImlhdCI6MTY0OTYyMjM5NiwiZXhwIjoxNjUyMjE0Mzk2fQ.ZQJBEZkZ9mR3mVYCu_Q_Xz-SFE0xWYv7UxzzBb0OzD0\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzYjRlMzgyYzVmYjFhNjJhZjFhNiIsImlhdCI6MTY0OTYyMjM5NiwiZXhwIjoxNjUyMjE0Mzk2fQ.ZQJBEZkZ9mR3mVYCu_Q_Xz-SFE0xWYv7UxzzBb0OzD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": null,
+						"description": "Get a single user's data"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/users/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"users",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-5WdcjK+eIT5o0qE9fcMnQ75bYgc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:28:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62533b4e382c5fb1a62af1a6\",\n    \"name\": \"new user\",\n    \"email\": \"test@gmail.com\",\n    \"createdAt\": \"2022-04-10T20:17:18.123Z\",\n    \"updatedAt\": \"2022-04-10T20:17:18.123Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			],
+			"description": "User resource"
+		},
+		{
+			"name": "Goals",
+			"item": [
+				{
+					"name": "Get a user's goals",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzYjRlMzgyYzVmYjFhNjJhZjFhNiIsImlhdCI6MTY0OTYyMjM5NiwiZXhwIjoxNjUyMjE0Mzk2fQ.ZQJBEZkZ9mR3mVYCu_Q_Xz-SFE0xWYv7UxzzBb0OzD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/goals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"goals"
+							]
+						},
+						"description": "Returns array of goal objects for an authenticated user."
+					},
+					"response": [
+						{
+							"name": "Get a user's goals",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/goals",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"goals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "365"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16d-K3K632hyuRp3nPTGkG23n5PnmIY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:33:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"62533f01382c5fb1a62af1b2\",\n        \"user\": \"62533b4e382c5fb1a62af1a6\",\n        \"text\": \"This is a goal\",\n        \"createdAt\": \"2022-04-10T20:33:05.899Z\",\n        \"updatedAt\": \"2022-04-10T20:33:05.899Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"62533f09382c5fb1a62af1b5\",\n        \"user\": \"62533b4e382c5fb1a62af1a6\",\n        \"text\": \"This is another goal\",\n        \"createdAt\": \"2022-04-10T20:33:13.697Z\",\n        \"updatedAt\": \"2022-04-10T20:33:13.697Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create a goal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzYjRlMzgyYzVmYjFhNjJhZjFhNiIsImlhdCI6MTY0OTYyMjM5NiwiZXhwIjoxNjUyMjE0Mzk2fQ.ZQJBEZkZ9mR3mVYCu_Q_Xz-SFE0xWYv7UxzzBb0OzD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "text",
+									"value": "A new goal!",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/goals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"goals"
+							]
+						},
+						"description": "Creates a goal which is associated with the single user that sent the request."
+					},
+					"response": [
+						{
+							"name": "Create a goal",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "text",
+											"value": "A new goal!",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/goals",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"goals"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-BD6KmKtxmnC8s2QJ/rygoVDCgYs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:35:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"goal\": {\n        \"user\": \"62533b4e382c5fb1a62af1a6\",\n        \"text\": \"A new goal!\",\n        \"_id\": \"62533f9b382c5fb1a62af1ba\",\n        \"createdAt\": \"2022-04-10T20:35:39.726Z\",\n        \"updatedAt\": \"2022-04-10T20:35:39.726Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a goal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTMzYjRlMzgyYzVmYjFhNjJhZjFhNiIsImlhdCI6MTY0OTYyMjM5NiwiZXhwIjoxNjUyMjE0Mzk2fQ.ZQJBEZkZ9mR3mVYCu_Q_Xz-SFE0xWYv7UxzzBb0OzD0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "text",
+									"value": "Edited goal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/api/goals/62533f9b382c5fb1a62af1ba",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"goals",
+								"62533f9b382c5fb1a62af1ba"
+							]
+						},
+						"description": "Updates a user's goal with new text field"
+					},
+					"response": [
+						{
+							"name": "Update a goal",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "text",
+											"value": "Edited goal",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:5000/api/goals/62533f9b382c5fb1a62af1ba",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"goals",
+										"62533f9b382c5fb1a62af1ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-ZfXI6lwiY433ujggbsFTPvwqEOA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:39:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62533f9b382c5fb1a62af1ba\",\n    \"user\": \"62533b4e382c5fb1a62af1a6\",\n    \"text\": \"Edited goal\",\n    \"createdAt\": \"2022-04-10T20:35:39.726Z\",\n    \"updatedAt\": \"2022-04-10T20:39:05.373Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete goal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": null,
+						"description": "Deletes a user's goal if authorized and goal id exists"
+					},
+					"response": [
+						{
+							"name": "Delete goal",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/goals/62533f9b382c5fb1a62af1ba",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"goals",
+										"62533f9b382c5fb1a62af1ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-PviIuFqEQwI00rjWHsKDh4fGshQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 20:40:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"62533f9b382c5fb1a62af1ba\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Goals resource",
+			"auth": {
+				"type": "bearer"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
