@@ -25,7 +25,7 @@ Built this while learning about React and the MERN stack
 
 -   API Documentation: [https://documenter.getpostman.com/view/18051440/UVyysCHv](https://documenter.getpostman.com/view/18051440/UVyysCHv)
 -   Repository URL: [https://github.com/jeramiahgcoffey/goalsetter](https://github.com/jeramiahgcoffey/goalsetter)
--   Live Site URL: [https://jsgoalsetter.herokuapp.com/](https://jsgoalsetter.herokuapp.com/)
+-   Live Site URL: N/A - RIP Heroku free tier
 
 ## My process
 
